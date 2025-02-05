@@ -8,7 +8,8 @@ cp -r  plugins/*  ~/.local/share/gedit/plugins
 
 # Activate
 
-Activate the plugin in Gedit under `Preferences --> Plugins`. It is recommended to configure the plugin.
+Activate the plugin in Gedit under `Preferences --> Plugins`. 
+It is recommended to configure the plugin by adding the API Key from https://deepinfra.com/dash/api_keys.
 
 # Using
 
