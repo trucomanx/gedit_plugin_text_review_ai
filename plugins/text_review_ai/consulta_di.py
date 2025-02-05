@@ -22,12 +22,12 @@ from openai import OpenAI
 import subprocess
 
 
-def comparar_textos(texto1, texto2, program="meld"):
-    with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".tex") as temp1, \
-         tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".tex") as temp2:
+def comparar_textos(texto_in, texto_out, program="meld"):
+    with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".input.tex") as temp1, \
+         tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".output.tex") as temp2:
         
-        temp1.write(texto1)
-        temp2.write(texto2)
+        temp1.write(texto_in)
+        temp2.write(texto_out)
         
         temp1_path = temp1.name
         temp2_path = temp2.name
