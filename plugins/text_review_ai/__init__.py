@@ -3,8 +3,7 @@ from gi.repository import GObject, Gtk, Gedit, PeasGtk, Gio
 
 import os
 import json
-import consulta_di as cdi
-
+from . import consulta_di as cdi
 
 
 CONFIG_BASE_DIR="~/.config/gedit/plugins/text_review_ai"
@@ -79,9 +78,9 @@ def verifica_ou_cria_json(filename, default_apikey="", default_host="https://api
 ################################################################################
 # For our example application, this class is not exactly required.
 # But we had to make it because we needed the app menu extension to show the menu.
-class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
+class TextReviewAIAppActivatable(GObject.Object, Gedit.AppActivatable):
     app = GObject.property(type=Gedit.App)
-    __gtype_name__ = "ExampleAppActivatable"
+    __gtype_name__ = "TextReviewAIAppActivatable"
 
     def __init__(self):
         GObject.Object.__init__(self)
@@ -94,7 +93,7 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 
     def _build_menu(self):
     
-        review_shortcut = "<Ctrl><Shift>a"
+        review_shortcut = "<Ctrl><Shift>k"
 
         # Get the extension from tools menu        
         self.menu_ext = self.extend_menu("tools-section")
@@ -125,9 +124,9 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 
 
 ################################################################################
-class ExampleWindowActivatable(GObject.Object, Gedit.WindowActivatable, PeasGtk.Configurable):
+class TextReviewAIWindowActivatable(GObject.Object, Gedit.WindowActivatable, PeasGtk.Configurable):
     window = GObject.property(type=Gedit.Window)
-    __gtype_name__ = "ExampleWindowActivatable"
+    __gtype_name__ = "TextReviewAIWindowActivatable"
 
     def __init__(self):
         GObject.Object.__init__(self)

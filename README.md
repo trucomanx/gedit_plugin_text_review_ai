@@ -8,8 +8,8 @@ cp -r  plugins/*  ~/.local/share/gedit/plugins
 
 # Activate
 
-Activate the plugin in Gedit under `Preferences --> Plugins`. It is recomended configurate the plugin.
+Activate the plugin in Gedit under `Preferences --> Plugins`. It is recommended to configure the plugin.
 
 # Using
 
-Activate text-review-ai by selecting text and pressing `<Ctrl><Shift>A`.
+Activate text-review-ai by selecting text and pressing `<Ctrl><Shift>k`.

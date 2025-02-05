@@ -2,7 +2,7 @@
 Loader=python3
 Module=text_review_ai
 IAge=3
-Name=Text to Speech
+Name=Text Review AI
 Icon=document-new
 Description=Text Review AI plugin.
 Authors= Fernando Pujaico Rivera <fernando.pujaico.rivera@gmail.com>
