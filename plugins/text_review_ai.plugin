@@ -1,0 +1,11 @@
+[Plugin]
+Loader=python3
+Module=text_review_ai
+IAge=3
+Name=Text to Speech
+Icon=document-new
+Description=Text Review AI plugin.
+Authors= Fernando Pujaico Rivera <fernando.pujaico.rivera@gmail.com>
+Copyright=Copyright © 2024 Fernando Pujaico Rivera <fernando.pujaico.rivera@gmail.com>
+Website=https://github.com/trucomanx/gedit_plugin_text_review_ai
+Version=0.1.0
