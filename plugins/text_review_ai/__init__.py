@@ -213,14 +213,28 @@ class TextReviewAIWindowActivatable(GObject.Object, Gedit.WindowActivatable, Pea
         # Criar uma caixa vertical para a interface de configuração
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
 
+        label = Gtk.Label()
+        label.set_markup("Buy a Coffee for Fernando Pujaico Rivera. <a href=\"https://ko-fi.com/trucomanx\">https://ko-fi.com/trucomanx</a>")
+        vbox.pack_start(label, False, False, 0)
+
+        # Separator
+        separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+        vbox.pack_start(separator, False, False, 10)
+
         # Adicionar uma entrada de texto (Gtk.Label) 
         path = os.path.join(os.path.expanduser(CONFIG_BASE_DIR),CONFIG_JSON_FILENAME);
         label = Gtk.Label()
         label.set_markup("Config file: <a href=\"file://"+path+"\">"+path+"</a>")
         vbox.pack_start(label, False, False, 0)
 
+        # Separator
+        separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+        vbox.pack_start(separator, False, False, 10)
+
+
         # Adicionar uma entrada de texto (Gtk.Label) 
-        label = Gtk.Label(label="Enter the the host of AI:")
+        label = Gtk.Label()
+        label.set_markup("<b>Enter the the host of AI:</b>")
         vbox.pack_start(label, False, False, 0)
 
         # Entrada de texto para a configuração do host
@@ -229,7 +243,8 @@ class TextReviewAIWindowActivatable(GObject.Object, Gedit.WindowActivatable, Pea
         vbox.pack_start(self.entry_host, False, False, 0)
 
         # Adicionar uma entrada de texto (Gtk.Label) 
-        label = Gtk.Label(label="Enter the the model of AI:")
+        label = Gtk.Label()
+        label.set_markup("<b>Enter the the model of AI:</b>")
         vbox.pack_start(label, False, False, 0)
 
         # Entrada de texto para a configuração do port
@@ -238,13 +253,18 @@ class TextReviewAIWindowActivatable(GObject.Object, Gedit.WindowActivatable, Pea
         vbox.pack_start(self.entry_model, False, False, 0)
         
         # Adicionar uma entrada de texto (Gtk.Entry) para o usuário configurar o idioma
-        label = Gtk.Label(label="Enter the api key of AI:")
+        label = Gtk.Label()
+        label.set_markup("<b>Enter the api key of AI:</b>")
         vbox.pack_start(label, False, False, 0)
 
         # Entrada de texto para a configuração do idioma
         self.entry_apikey = Gtk.Entry()
         self.entry_apikey.set_text(self.info['apikey'].strip())  # Valor padrão
         vbox.pack_start(self.entry_apikey, False, False, 0)
+
+        # Separator
+        separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+        vbox.pack_start(separator, False, False, 10)
 
         # Botão para salvar as configurações
         button = Gtk.Button(label="Save Settings")

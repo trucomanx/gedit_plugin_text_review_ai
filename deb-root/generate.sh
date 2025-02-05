@@ -29,3 +29,8 @@ cp -r ../plugins/* gedit-plugin-text-review-ai/usr/lib/$ARCH/gedit/plugins
 dpkg-deb --build gedit-plugin-text-review-ai
 
 mv gedit-plugin-text-review-ai.deb gedit-plugin-text-review-ai_${VERSION}.deb
+
+echo ""
+echo "sudo dpkg -i gedit-plugin-text-review-ai_${VERSION}.deb"
+echo ""
+
