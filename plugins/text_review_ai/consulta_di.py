@@ -48,7 +48,7 @@ def consulta_deepinfra(base_url,api_key,msg,model,program='meld',speak=True):
         model=model,
         messages=[
             {"role": "system", "content": 
-            '''You are a system that detects spelling, grammar, punctuation, coherence or cohesion errors in latex texts in any language.
+            '''You are an expert system that detects spelling, grammar, punctuation, coherence or cohesion errors in latex texts in any language.
     If you find no errors, only return the text "<NOERROR>".
     If you find errors, without any further response comment, only return a corrected version of the text respecting line breaks and try to make the least amount of changes possible, respecting the spirit of the content.
     The review will be done on each text that you receive from the user.'''
